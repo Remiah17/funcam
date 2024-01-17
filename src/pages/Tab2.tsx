@@ -19,16 +19,17 @@ import { usePhotoGallery } from '../hooks/usePhotoGallery';
 import { camera, trash, close } from 'ionicons/icons';
 
 const Tab2: React.FC = () => {
-  const { photos, takePhoto } = usePhotoGallery();
+
+  const { takePhoto } = usePhotoGallery();
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-        <IonTitle>Photo Gallery</IonTitle>
+        <IonTitle>FunCam</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        
   <IonFab vertical="bottom" horizontal="center" slot="fixed">
     <IonFabButton onClick={() => takePhoto()}>
       <IonIcon icon={camera}></IonIcon>

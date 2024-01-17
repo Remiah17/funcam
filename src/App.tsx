@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { image, square, triangle, camera } from 'ionicons/icons';
+import { image, square, camera, colorWandOutline } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -41,31 +41,31 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
+          <Route exact path="/gallery">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
+          <Route exact path="/camera">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
+          <Route path="/effects">
             <Tab3 />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/camera" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={camera} />
-            <IonLabel>Camera</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="tab1" href="/gallery">
             <IonIcon aria-hidden="true" icon={image} />
             <IonLabel>Gallery</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Profile</IonLabel>
+          <IonTabButton tab="tab2" href="/camera">
+            <IonIcon aria-hidden="true" icon={camera} />
+            <IonLabel>Camera</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab3" href="/effects">
+            <IonIcon aria-hidden="true" icon={colorWandOutline} />
+            <IonLabel>Effects</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
